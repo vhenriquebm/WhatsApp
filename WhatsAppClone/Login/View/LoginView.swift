@@ -14,7 +14,8 @@ struct LoginView: View {
     var body: some View {
         
         NavigationStack {
-            VStack(alignment: .leading) {
+            
+            VStack(alignment: .leading, spacing: 12) {
                 
                 Text("Hello,")
                     .font(.largeTitle)
@@ -35,7 +36,39 @@ struct LoginView: View {
             }
             .padding([.top, .horizontal], 32)
             
+            HStack {
+                Spacer()
+                
+                NavigationLink(destination: Text("Reset password..")) {
+                    Text("Forgot Password")
+                        .font(.system(size: 13, weight: .semibold))
+                        .padding(.top)
+                        .padding(.trailing, 28)
+                }
+            }
+            
+            Button {
+                
+            } label: {
+                Text("Sign in")
+                    .foregroundStyle(.white)
+                    .frame(width: 340, height: 50)
+                    .background(Color.blue)
+                    .clipShape(Capsule())
+                    .padding()
+                    .shadow(color: .gray, radius: 10, x: 0.0, y: 0.0)
+            }
+            
             Spacer()
+            
+            NavigationLink(destination: RegisterView()) {
+                HStack {
+                    Text("Don´t have an account?").font(.system(size: 14))
+                    
+                    Text("Sign up").font(.system(size: 14, weight: .semibold))
+                }
+                
+            }
         }
     }
 }
