@@ -74,7 +74,6 @@ struct LoginView: View {
                     
                     Text("Sign up").font(.system(size: 14, weight: .semibold))
                 }
-                
             }
         }
     }

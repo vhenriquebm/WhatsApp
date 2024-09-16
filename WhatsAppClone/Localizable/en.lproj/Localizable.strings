@@ -3,3 +3,5 @@
 
 "custom.text.field.email.placeholder" = "Email";
 "custom.text.field.password.placeholder" = "Password";
+"custom.text.field.full.name.placeholder" = "Full Name";
+"custom.text.field.user.name.placeholder" = "Username";
