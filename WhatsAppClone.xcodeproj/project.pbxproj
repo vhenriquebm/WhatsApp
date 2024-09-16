@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424CA0E62C9899D4001B8926 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CA0E52C9899D4001B8926 /* CustomTextField.swift */; };
+		424CA0EA2C989EC6001B8926 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 424CA0E82C989EC6001B8926 /* Localizable.strings */; };
+		424CA0EC2C989F0F001B8926 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CA0EB2C989F0F001B8926 /* Localizable.swift */; };
 		42F5BF742C9396A600DBFFBD /* WhatsAppCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5BF732C9396A600DBFFBD /* WhatsAppCloneApp.swift */; };
 		42F5BF762C9396A600DBFFBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5BF752C9396A600DBFFBD /* ContentView.swift */; };
 		42F5BF782C9396A900DBFFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F5BF772C9396A900DBFFBD /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		424CA0E52C9899D4001B8926 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		424CA0E92C989EC6001B8926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		424CA0EB2C989F0F001B8926 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		42F5BF702C9396A600DBFFBD /* WhatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F5BF732C9396A600DBFFBD /* WhatsAppCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppCloneApp.swift; sourceTree = "<group>"; };
 		42F5BF752C9396A600DBFFBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +42,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424CA0E42C9899BF001B8926 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				424CA0E52C9899D4001B8926 /* CustomTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		424CA0E72C989EB0001B8926 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				424CA0E82C989EC6001B8926 /* Localizable.strings */,
+				424CA0EB2C989F0F001B8926 /* Localizable.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		42F5BF672C9396A600DBFFBD = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +78,8 @@
 		42F5BF722C9396A600DBFFBD /* WhatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
+				424CA0E72C989EB0001B8926 /* Localizable */,
+				424CA0E42C9899BF001B8926 /* CustomView */,
 				42F5BF892C9398B500DBFFBD /* Register */,
 				42F5BF882C9398AF00DBFFBD /* Login */,
 				42F5BF862C9397FC00DBFFBD /* Utils */,
@@ -220,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F5BF7B2C9396A900DBFFBD /* Preview Assets.xcassets in Resources */,
+				424CA0EA2C989EC6001B8926 /* Localizable.strings in Resources */,
 				42F5BF782C9396A900DBFFBD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,10 +261,23 @@
 				42F5BF762C9396A600DBFFBD /* ContentView.swift in Sources */,
 				42F5BF912C93992300DBFFBD /* LoginView.swift in Sources */,
 				42F5BF742C9396A600DBFFBD /* WhatsAppCloneApp.swift in Sources */,
+				424CA0EC2C989F0F001B8926 /* Localizable.swift in Sources */,
+				424CA0E62C9899D4001B8926 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		424CA0E82C989EC6001B8926 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				424CA0E92C989EC6001B8926 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		42F5BF7C2C9396A900DBFFBD /* Debug */ = {

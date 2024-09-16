@@ -1,0 +1,5 @@
+
+// MARK: - Generic App
+
+"custom.text.field.email.placeholder" = "Email";
+"custom.text.field.password.placeholder" = "Password";

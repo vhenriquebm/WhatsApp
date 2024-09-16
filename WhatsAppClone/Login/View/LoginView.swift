@@ -31,8 +31,15 @@ struct LoginView: View {
             .padding()
             
             VStack {
-                TextField("Email", text: $email)
-                SecureField("Password", text: $password)
+                
+                CustomTextField(text: $email,
+                                placeholder: Generic.Placeholder.email, image: "envelope",
+                                isSecurity: false)
+                
+                CustomTextField(text: $password,
+                                placeholder: Generic.Placeholder.password, image: "lock",
+                                isSecurity: true)
+                
             }
             .padding([.top, .horizontal], 32)
             
