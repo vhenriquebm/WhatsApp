@@ -11,7 +11,7 @@ struct SettingsHeaderView: View {
     var body: some View {
         
         HStack {
-            Image(systemName: "person")
+            Image(.ironMan)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 64, height: 64)
@@ -19,8 +19,9 @@ struct SettingsHeaderView: View {
                 .padding(.leading)
             
             VStack (alignment: .leading, spacing: 4){
-                Text("Eddie Brock")
+                Text("Iron man")
                     .font(.system(size: 18))
+                    .foregroundStyle(.black)
                 
                 Text("Available")
                     .foregroundStyle(.gray)
