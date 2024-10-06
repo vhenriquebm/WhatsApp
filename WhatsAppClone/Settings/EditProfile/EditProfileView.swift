@@ -47,7 +47,7 @@ struct EditProfileView: View {
                 .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
                 .background(Color.white)
                 
-                NavigationLink(destination: Text("Edit Status")) {
+                NavigationLink(destination: StatusSelectorView()) {
                     VStack(alignment: .leading) {
                         
                         Text("Status")
