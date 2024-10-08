@@ -9,6 +9,9 @@ import SwiftUI
 
 struct EditProfileView: View {
     @State private var fullName: String = "Iron Man"
+    @State private var showImagePicker = false
+    @State private var selectedImage: UIImage?
+    @State private var profileImage: Image?
     
     var body: some View {
         
@@ -20,15 +23,28 @@ struct EditProfileView: View {
                 VStack {
                     HStack {
                         VStack {
-                            Image(.ironMan)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 64, height: 64)
-                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            if let profileImage = profileImage {
+                                profileImage
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 64, height: 64)
+                                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            } else {
+                                Image(.ironMan)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 64, height: 64)
+                                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            }
+                            
+                            Button(action: {
+                                showImagePicker.toggle()
+                            }, label: {
                                 Text("Edit")
-                            })
+                            }).sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                                ImagePicker(selectedImage: $selectedImage)
+                            }
                         }
                         .padding()
                         
@@ -72,7 +88,11 @@ struct EditProfileView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Edit Profile")
-        
+    }
+    
+    private func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        profileImage = Image(uiImage: selectedImage)
     }
 }
 
