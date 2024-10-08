@@ -21,8 +21,8 @@ struct SettingsView: View {
                     label: { SettingsHeaderView() })
                 
                 VStack(spacing: 1) {
-                    ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
-                        SettingsCell(viewModel: viewModel)
+                    ForEach(SettingsCellViewModel.allCases, id: \.self) { status in
+                        SettingsCell(viewModel: status)
                     }
                 }
                 

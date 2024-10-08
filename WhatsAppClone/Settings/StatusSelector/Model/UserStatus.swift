@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum StatusViewModel: Int, CaseIterable {
+enum UserStatus: Int, CaseIterable {
     case notConfigured
     case available
     case busy
