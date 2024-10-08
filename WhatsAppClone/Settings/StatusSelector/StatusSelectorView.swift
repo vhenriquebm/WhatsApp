@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct StatusSelectorView: View {
+    
     var body: some View {
+        
         ZStack {
             Color(.systemGroupedBackground)
                 .ignoresSafeArea()
@@ -18,27 +20,18 @@ struct StatusSelectorView: View {
                     Text("CURRENTLY SET TO")
                         .foregroundStyle(.gray)
                         .padding()
-      
-                    HStack {
-                        Text("Available")
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    .frame(height: 56)
-                    .background(Color.white)
-
+                    
+                    StatusCell(viewModel: StatusViewModel(rawValue: 4)!)
+                    
                     Text("SELECT YOUR STATUS")
                         .foregroundStyle(.gray)
                         .padding()
                     
-                    ForEach((0...10), id: \.self) { _ in
-                        HStack {
-                            Text("Available")
-                            Spacer()
-                        }
-                        .padding(.horizontal)
-                        .frame(height: 56)
-                        .background(Color.white)
+                    ForEach((StatusViewModel.allCases.filter { $0 != .notConfigured }), id: \.self) { viewModel in
+                        Button(action: {},
+                               label: {StatusCell(viewModel: viewModel)}).foregroundColor(Color.black)
+                        
+                        
                     }
                 }
             }
@@ -48,4 +41,18 @@ struct StatusSelectorView: View {
 
 #Preview {
     StatusSelectorView()
+}
+
+struct StatusCell: View {
+    let viewModel: StatusViewModel
+    
+    var body: some View {
+        HStack {
+            Text(viewModel.title)
+            Spacer()
+        }
+        .frame(height: 56)
+        .padding(.horizontal)
+        .background(Color.white)
+    }
 }
