@@ -29,7 +29,7 @@ struct MainTabView: View {
             
             TabView(selection: $selectedIndex) {
                 
-                ChatView()
+                ConversationView()
                     .onTapGesture {
                         selectedIndex = 0
                     }

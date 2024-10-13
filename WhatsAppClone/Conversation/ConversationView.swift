@@ -11,19 +11,19 @@ struct ConversationView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             
-            // Chats
             ScrollView {
-                VStack {
-                    
+                VStack(alignment: .leading) {
+                    ForEach((0 ... 10), id: \.self) { _ in
+                        ConversationCell()
+                    }
                 }
             }
-            
-            //Floating button
             
             Button(action: {},
                    label: {
                 Image(systemName: "square.and.pencil")
                     .resizable()
+                    .scaledToFit()
                     .frame(width: 24, height: 24)
                     .padding()
             })
