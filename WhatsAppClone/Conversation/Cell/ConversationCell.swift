@@ -24,6 +24,8 @@ struct ConversationCell: View {
                     Text("This is some text message for now..")
                         .font(.system(size: 15))
                 }
+                .foregroundStyle(.black)
+                
                 Spacer()
             }
             .padding(.horizontal)
